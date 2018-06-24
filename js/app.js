@@ -35,7 +35,11 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+var GamePlayer = function() {
+    this.x = 404;
+    this.y = 404;
 
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
