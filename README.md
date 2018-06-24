@@ -1,6 +1,32 @@
-frontend-nanodegree-arcade-game
-===============================
+# Classic Arcade Game Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This is my "Classic Arcade Game Project" project at Front-End Nanodegree Program.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+
+## Playing instructions:
+
+This game is played through the following instructions:
+* The player starts from the grass field
+* It must pass through the field of stones, where there are many bugs moving from left to right in three lanes
+* The goal is to reach the water field without encountering any of the bugs where the game wins
+* When it reaches the water field, the player wins the game and returns to the original
+
+
+## Game Installation
+
+* Clone this repository: https://github.com/Merkanto/frontend-nanodegree-arcade-game
+* After that, open index.html in your favourite browser and play the "Classic Arcade Game".
+
+## Tools and resources used:
+
+* Initial code from Udacity Front-End Nanodegree Program course: https://github.com/udacity/frontend-nanodegree-arcade-game
+* The "Memory Game" background image is from Pixabay.com. Here is the link for the image: https://pixabay.com/en/android-tv-game-controller-1535038/
+
+
+## Known Bugs:
+
+*  I'm not aware of any bugs yet.
+
+## Game Author
+
+* Front-End Nanodegree Program ninja student: Miroslav Zhelezchev and a little help from the Udacity team.
