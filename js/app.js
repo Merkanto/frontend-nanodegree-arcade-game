@@ -78,7 +78,7 @@ GamePlayer.prototype.collisionsCheck = function () {
     ctx.clearRect(10, 10, 350, 50);
     ctx.fillStyle = "#ccc";
     ctx.font = "28pt Arial Narrow";
-    ctx.fillText("Your final score is: " + this.score, 404, 40);
+    ctx.fillText("Your final score is: " + this.score, 202, 40);
 };
 
 
