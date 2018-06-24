@@ -36,9 +36,15 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 var GamePlayer = function() {
+    //start position coordinates
     this.x = 404;
     this.y = 404;
 
+    //start game score
+    this.gameScore = 0;
+
+    //show image of the player
+    this.sprite = 'images/char-boy.png';
 };
 
 // Now instantiate your objects.
