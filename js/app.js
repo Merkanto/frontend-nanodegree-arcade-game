@@ -1,3 +1,6 @@
+//declaring of array of enemies
+let arrayOfEnemies = [];
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -7,7 +10,7 @@ var Enemy = function() {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite = "images/enemy-bug.png";
 
     //The speed of our enemies
     this.speed = Math.random() * 100;
@@ -44,8 +47,12 @@ var GamePlayer = function() {
     this.gameScore = 0;
 
     //show image of the player
-    this.sprite = 'images/char-boy.png';
+    this.sprite = "images/char-boy.png";
 };
+
+
+
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
