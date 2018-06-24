@@ -1,6 +1,6 @@
 
 //Declaring of player variable object
-let player = new GamePlayer();
+var player = new GamePlayer();
 
 // Enemies our player must avoid
 var Enemy = function() {
@@ -39,7 +39,7 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-let GamePlayer = function() {
+var GamePlayer = function() {
     //Start position coordinates
     this.x = 404;
     this.y = 404;
@@ -53,7 +53,7 @@ let GamePlayer = function() {
 
 //Checks if the player crashed in the any enemy and restart the game player position`s coordinates
 GamePlayer.prototype.collisionsCheck = function () {
-    for (const currentEnemy in allEnemies) {
+    for (var currentEnemy in allEnemies) {
         if (this.x < allEnemies[currentEnemy].x + 80 &&
             this.x + 65 > allEnemies[currentEnemy].x + 2 &&
             this.y + 135 > allEnemies[currentEnemy].y + 140 &&
@@ -76,7 +76,7 @@ GamePlayer.prototype.collisionsCheck = function () {
     ctx.clearRect(10, 10, 350, 50);
     ctx.fillStyle = "#ccc";
     ctx.font = "28pt Arial Narrow";
-    ctx.fillText("Your score is: " + this.score, 404, 40);
+    ctx.fillText("Your final score is: " + this.score, 404, 40);
 };
 
 GamePlayer.prototype.update = function () {
@@ -112,10 +112,10 @@ GamePlayer.prototype.handleInput = function(keyboardKey) {
 // Place the player object in a variable called player
 //Create array that holds all of the enemies
 //Declaring of empty array of enemies
-let allEnemies = [];
+var allEnemies = [];
 
-for (let currentEnemy = 0; currentEnemy < 10; currentEnemy++) {
-    let addEnemyToEnemiesArr = new Enemy();
+for (var currentEnemy = 0; currentEnemy < 10; currentEnemy++) {
+    var addEnemyToEnemiesArr = new Enemy();
     allEnemies.push(addEnemyToEnemiesArr);
 }
 
