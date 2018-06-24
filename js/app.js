@@ -1,5 +1,3 @@
-//Declaring of empty array of enemies
-let arrayOfEnemies = [];
 
 //Declaring of player variable object
 let player = new GamePlayer();
@@ -55,7 +53,7 @@ var GamePlayer = function() {
 
 //Checks if the player crashed in the any enemy and restart the game player position`s coordinates
 GamePlayer.prototype.collisionCheck = function () {
-    for (const currentEnemy in arrayOfEnemies) {
+    for (const currentEnemy in allEnemies) {
         if (this.x < allEnemies[currentEnemy].x + 80 &&
             this.x + 65 > allEnemies[currentEnemy].x + 2 &&
             this.y + 135 > allEnemies[currentEnemy].y + 140 &&
@@ -105,12 +103,17 @@ GamePlayer.prototype.handleInput = function(keyboardKey) {
     }
 };
 
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+//Create array that holds all of the enemies
+//Declaring of empty array of enemies
+let allEnemies = [];
 
+for (let currentEnemy = 0; currentEnemy < 10; currentEnemy++) {
+    let addEnemyToEnemiesArr = new Enemy();
+    allEnemies.push(addEnemyToEnemiesArr);
+}
 
 
 // This listens for key presses and sends the keys to your
