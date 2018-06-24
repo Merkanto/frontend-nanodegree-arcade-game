@@ -1,6 +1,4 @@
 
-//Declaring of player variable object
-var player = new GamePlayer();
 
 // Enemies our player must avoid
 var Enemy = function() {
@@ -51,6 +49,10 @@ var GamePlayer = function() {
     this.sprite = "images/char-boy.png";
 };
 
+GamePlayer.prototype.update = function () {
+    this.collisionsCheck()
+};
+
 //Checks if the player crashed in the any enemy and restart the game player position`s coordinates
 GamePlayer.prototype.collisionsCheck = function () {
     for (var currentEnemy in allEnemies) {
@@ -79,9 +81,7 @@ GamePlayer.prototype.collisionsCheck = function () {
     ctx.fillText("Your final score is: " + this.score, 404, 40);
 };
 
-GamePlayer.prototype.update = function () {
-    this.collisionsCheck()
-};
+
 
 //Draw the game player on the screen
 GamePlayer.prototype.render = function () {
@@ -107,6 +107,9 @@ GamePlayer.prototype.handleInput = function(keyboardKey) {
     }
 };
 
+//Declaring of player variable object
+var player = new GamePlayer();
+
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
@@ -114,9 +117,14 @@ GamePlayer.prototype.handleInput = function(keyboardKey) {
 //Declaring of empty array of enemies
 var allEnemies = [];
 
-for (var currentEnemy = 0; currentEnemy < 10; currentEnemy++) {
+for (var currentEnemy = 0; currentEnemy < getRandomBugsNumber(10); currentEnemy++) {
     var addEnemyToEnemiesArr = new Enemy();
     allEnemies.push(addEnemyToEnemiesArr);
+}
+
+//function for get random number of bugs
+function getRandomBugsNumber(max) {
+    return Math.floor(Math.random() * Math.floor(max)) + 1;
 }
 
 
