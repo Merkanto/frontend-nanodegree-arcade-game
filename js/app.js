@@ -1,4 +1,4 @@
-//declaring of empty array of enemies
+//Declaring of empty array of enemies
 let arrayOfEnemies = [];
 
 // Enemies our player must avoid
@@ -39,18 +39,44 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 var GamePlayer = function() {
-    //start position coordinates
+    //Start position coordinates
     this.x = 404;
     this.y = 404;
 
-    //start game score
+    //Start game score
     this.gameScore = 0;
 
-    //show image of the player
+    //Show image of the player
     this.sprite = "images/char-boy.png";
 };
 
+//Checks if the player crashed in the any enemy and restart the game player position`s coordinates
+GamePlayer.prototype.collisionCheck = function () {
+    for (const currentEnemy in arrayOfEnemies) {
+        if (this.x < allEnemies[currentEnemy].x + 80 &&
+            this.x + 65 > allEnemies[currentEnemy].x + 2 &&
+            this.y + 135 > allEnemies[currentEnemy].y + 140 &&
+            this.y + 65 < allEnemies[currentEnemy].y + 75) {
+            this.score = 0;
+            this.x = 404;
+            this.y = 404;
+            console.log('Start again!');
+        }
+    }
 
+    if (this.y <= 0) {
+        this.score += 1;
+        this.x = 404;
+        this.y = 404;
+        console.log('You Win!');
+    }
+
+    //Show Game player score
+    ctx.clearRect(10, 10, 350, 50);
+    ctx.fillStyle = '#0059b3';
+    ctx.font = '28px Helvetica';
+    ctx.fillText("Score: " + this.score, 404, 40);
+};
 
 
 
