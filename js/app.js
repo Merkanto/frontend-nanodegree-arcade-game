@@ -39,7 +39,7 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var GamePlayer = function() {
+let GamePlayer = function() {
     //Start position coordinates
     this.x = 404;
     this.y = 404;
@@ -52,7 +52,7 @@ var GamePlayer = function() {
 };
 
 //Checks if the player crashed in the any enemy and restart the game player position`s coordinates
-GamePlayer.prototype.collisionCheck = function () {
+GamePlayer.prototype.collisionsCheck = function () {
     for (const currentEnemy in allEnemies) {
         if (this.x < allEnemies[currentEnemy].x + 80 &&
             this.x + 65 > allEnemies[currentEnemy].x + 2 &&
@@ -77,6 +77,10 @@ GamePlayer.prototype.collisionCheck = function () {
     ctx.fillStyle = "#ccc";
     ctx.font = "28pt Arial Narrow";
     ctx.fillText("Your score is: " + this.score, 404, 40);
+};
+
+GamePlayer.prototype.update = function () {
+    this.collisionsCheck()
 };
 
 //Draw the game player on the screen
