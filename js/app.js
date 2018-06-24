@@ -81,6 +81,11 @@ GamePlayer.prototype.collisionCheck = function () {
     ctx.fillText("Your score is: " + this.score, 404, 40);
 };
 
+//Draw the game player on the screen
+GamePlayer.prototype.render = function () {
+      ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
 
 
 // Now instantiate your objects.
