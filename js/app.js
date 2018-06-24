@@ -1,4 +1,4 @@
-//declaring of array of enemies
+//declaring of empty array of enemies
 let arrayOfEnemies = [];
 
 // Enemies our player must avoid
