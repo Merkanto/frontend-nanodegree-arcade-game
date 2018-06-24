@@ -25,8 +25,8 @@ This game is played through the following instructions:
 
 ## Known Bugs:
 
-*  I do not know for any bugs till this moment.
+I do not know for any bugs till this moment.
 
 ## Game Author
 
-* Front-End Nanodegree Program ninja student: Miroslav Zhelezchev and a little help from the Udacity team.
+Front-End Nanodegree Program ninja student: Miroslav Zhelezchev and a little help from the Udacity team.
