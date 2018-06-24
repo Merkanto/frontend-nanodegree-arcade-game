@@ -86,6 +86,25 @@ GamePlayer.prototype.render = function () {
       ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+//Function creating who allows to the game player move up, down, left and right on the game screen
+GamePlayer.prototype.handleInput = function(keyboardKey) {
+    if (keyboardKey === "up" && this.y - 83 >= -11) {
+        this.y -= 83;
+    }
+
+    if (keyboardKey === "down" && this.y + 83 < 487) {
+        this.y += 83;
+    }
+
+    if (keyboardKey === "left" && this.x - 101 >= 0) {
+        this.x -= 101;
+    }
+
+    if (keyboardKey === "right" && this.x + 101 < 505) {
+        this.x += 101;
+    }
+};
+
 
 
 // Now instantiate your objects.
