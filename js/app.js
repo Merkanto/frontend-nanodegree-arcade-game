@@ -1,6 +1,9 @@
 //Declaring of empty array of enemies
 let arrayOfEnemies = [];
 
+//Declaring of player variable object
+let player = new GamePlayer();
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
