@@ -60,7 +60,7 @@ GamePlayer.prototype.collisionCheck = function () {
             this.score = 0;
             this.x = 404;
             this.y = 404;
-            console.log('Start again!');
+            console.log("Game over! Start again, if you want to accomplish more score!");
         }
     }
 
@@ -68,14 +68,14 @@ GamePlayer.prototype.collisionCheck = function () {
         this.score += 1;
         this.x = 404;
         this.y = 404;
-        console.log('You Win!');
+        console.log("You won the arcade game!");
     }
 
     //Show Game player score
     ctx.clearRect(10, 10, 350, 50);
-    ctx.fillStyle = '#0059b3';
-    ctx.font = '28px Helvetica';
-    ctx.fillText("Score: " + this.score, 404, 40);
+    ctx.fillStyle = "#ccc";
+    ctx.font = "28pt Arial Narrow";
+    ctx.fillText("Your score is: " + this.score, 404, 40);
 };
 
 
