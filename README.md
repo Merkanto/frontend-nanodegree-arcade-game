@@ -25,7 +25,7 @@ This game is played through the following instructions:
 
 ## Known Bugs:
 
-*  I'm not aware of any bugs yet.
+*  I do not know for any bugs till this moment.
 
 ## Game Author
 
