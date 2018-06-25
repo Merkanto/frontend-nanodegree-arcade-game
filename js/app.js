@@ -12,7 +12,7 @@ var Enemy = function() {
     this.sprite = "images/enemy-bug.png";
 
     //The speed of our enemies
-    this.speed = Math.random() * 100;
+    this.speed = Math.random() * 250;
 };
 
 // Update the enemy's position, required method for game
@@ -43,7 +43,7 @@ var GamePlayer = function() {
     this.y = 404;
 
     //Start game score
-    this.gameScore = 0;
+    this.score = 0;
 
     //Show image of the player
     this.sprite = "images/char-boy.png";
@@ -63,7 +63,6 @@ GamePlayer.prototype.collisionsCheck = function () {
             this.score = 0;
             this.x = 404;
             this.y = 404;
-            console.log("Game over! Start again, if you want to accomplish more score!");
         }
     }
 
@@ -71,14 +70,13 @@ GamePlayer.prototype.collisionsCheck = function () {
         this.score += 1;
         this.x = 404;
         this.y = 404;
-        console.log("You won the arcade game!");
     }
 
     //Show Game player score
     ctx.clearRect(10, 10, 350, 50);
     ctx.fillStyle = "#ccc";
-    ctx.font = "28pt Arial Narrow";
-    ctx.fillText("Your final score is: " + this.score, 202, 40);
+    ctx.font = "28px Arial";
+    ctx.fillText("Your current game score is: " + this.score, 0 , 40);
 };
 
 
