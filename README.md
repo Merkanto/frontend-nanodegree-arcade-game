@@ -1,3 +1,5 @@
+![alt text](https://github.com/Merkanto/frontend-nanodegree-arcade-game/blob/master/images/arcade-game-screenshot.png)
+
 # Classic Arcade Game Project
 
 This is my "Classic Arcade Game Project" project at Front-End Nanodegree Program.
